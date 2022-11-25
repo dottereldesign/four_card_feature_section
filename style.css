@@ -6,7 +6,8 @@
 
   --clr-neutral-100: hsl(234, 12%, 34%);
   --clr-neutral-200: hsl(229, 6%, 66%);
-  --clr-neutral-300: hsl(0, 0%, 98%);
+  --clr-neutral-300: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(0, 0%, 98%);
 
   --ff-primary-100: "Poppins", sans-serif;
 
@@ -99,7 +100,8 @@ select {
 }
 
 body {
-  margin-top: 2em;
+  margin: 2em 0 2em 0;
+  background-color: var(--clr-neutral-400);
 }
 
 header h1 {
@@ -120,10 +122,45 @@ header h2 {
 header p {
   font-size: var(--fs-500);
   font-weight: var(--fw-feather);
+  max-inline-size: 75ch;
+  margin: 0 auto;
   text-align: center;
   color: var(--clr-neutral-200);
 }
 
 header {
   margin-bottom: 4em;
+}
+
+article {
+  background-color: var(--clr-neutral-300);
+  padding: 1.5em;
+  width: min(100%, 350px);
+  height: 250px;
+  /* height: min(222px, 250px); */
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+article h3 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-100);
+  padding-bottom: 0.5em;
+}
+
+article p {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-feather);
+  color: var(--clr-neutral-200);
+}
+
+article img {
+  height: 57px;
+  width: 57px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
 }
